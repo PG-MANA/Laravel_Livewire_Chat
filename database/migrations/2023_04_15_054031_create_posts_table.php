@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('user_name');
             $table->string('post');
-            $table->string('chat_group');            $table->integer('post_id');
+            $table->string('chat_group');
             $table->timestamps();
         });
     }
