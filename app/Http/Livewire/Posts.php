@@ -23,10 +23,13 @@ class Posts extends Component
         }
     }
 
-    public function addPost(string $user_name, string $post_text) {
+    public function addPost(string $user_name, string $post_text, string $post_img) {
         $new_post = new Post();
         $new_post->user_name = $user_name;
         $new_post->post = $post_text;
+        if(!empty($post_img)) {
+            $new_post->post_img = $post_img;
+        }
         $new_post->chat_group = $this->chat_group_name;
         $new_post->save();
         $this->updatePostList();

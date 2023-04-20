@@ -15,3 +15,6 @@ use App\Http\Livewire;
 
 Route::get('/', Livewire\Main::class);
 Route::get('/group/{chat_group_name}/', Livewire\Main::class);
+Route::get('/picture/{file_name}', function($file_name) {
+    return File::get(base_path() . '/storage/app/picture/' . $file_name);
+});
