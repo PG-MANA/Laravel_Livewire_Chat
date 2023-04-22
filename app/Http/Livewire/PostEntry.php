@@ -17,7 +17,7 @@ class PostEntry extends Component
     protected $rules = [
         'post_user' => 'required|string',
         'post_text' => 'required|string|max:250',
-        'post_picture' => 'image|max:2048',
+        'post_picture' => 'nullable|image|max:2048',
     ];
     
     public function postEntry()
