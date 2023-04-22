@@ -4,7 +4,7 @@
     <b style="font-size: 1.2em;">{{ $post['user_name'] }}</b>
     <p>{{ $post['post'] }}</p>
     @if(!empty($post['post_img']))
-    <div><img src="/picture/{{ $post['post_img'] }}" /></div>
+    <div><img src="/{{ $post['post_img'] }}" /></div>
     @endif
 </div>
 @endforeach
